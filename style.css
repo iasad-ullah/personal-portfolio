@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Primary: #0F172A – Dark Navy (for header/nav text or backgrounds)
+Accent: #3B82F6 – Soft Blue (for hover effects, buttons, links)
+Light Background: #F8FAFC – Almost White (for main background) */
+
+/* Header background: #0F172A
+Text color: white or light gray on dark background
+Button or link hover: #3B82F6
+Body background: #F8FAFC
+Logo or name highlight (<span>ullah</span>): #3B82F6 */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: #f8fafc;
+}
+
+header {
+  background-color: #0f172a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.logo h2 {
+  color: lightgray;
+}
+
+.logo span {
+  color: #22cfe6;
+}
+
+#nav-list {
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 14px;
+  position: relative;
+}
+
+nav ul li a {
+  color: lightgray;
+  transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  height: 2px;
+  width: 0;
+  background-color: lightgray;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.fa-bars {
+  color: white;
+  display: none;
+}
+
+/* Main */
+
+/* 1. Hero Section  */
+#hero-section {
+  padding: 10px 15% 0 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intro-side {
+  width: 50%;
+  margin-top: 18%;
+}
+
+.intro-side h1 {
+  font-size: 3rem;
+  line-height: 58px;
+}
+
+.intro-side h2 {
+  font-size: 30px;
+}
+
+.intro-side span {
+  color: #22cfe6;
+}
+
+.intro-side p {
+  margin-bottom: 20px;
+}
+
+.intro-btn {
+  border-radius: 4px;
+  padding: 7px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hire-btn {
+  color: #22cfe6;
+  border: 2px solid #22cfe6;
+}
+
+.hire-btn:hover {
+  color: white;
+  background-color: #22cfe6;
+}
+
+.download-btn {
+  background-color: #22cfe6;
+  color: white;
+  border: 2px solid #22cfe6;
+}
+
+.download-btn:hover {
+  color: #22cfe6;
+  background-color: white;
+}
+
+.image-side {
+  margin-top: 12%;
+}
+
+.image-side img {
+  width: 300px;
+  box-shadow: 0 0 8px rgba(34, 207, 230, 0.9); /* bulb glow */
+  border-radius: 50%;
+}
+
+/* Tablets and below (<= 1024px) */
+@media screen and (max-width: 1024px) {
+  header {
+    padding: 10px 5%;
+  }
+
+  #hero-section {
+    padding: 40px 5%;
+  }
+
+  .intro-side h1 {
+    font-size: 2.5rem;
+  }
+
+  .intro-side h2 {
+    font-size: 26px;
+  }
+
+  .image-side img {
+    width: 250px;
+  }
+}
+
+/* Mobile Landscape and Small Tablets (<= 768px) */
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none; /* You can add a menu toggle here later */
+  }
+
+  .fa-bars {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  #hero-section {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 30px 5%;
+  }
+
+  .intro-side {
+    width: 100%;
+    text-align: center;
+    margin-top: 10%;
+  }
+
+  .image-side {
+    margin-top: 5%;
+  }
+
+  .image-side img {
+    width: 200px;
+  }
+
+  #nav-list {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 50%;
+    background-color: #0f172a;
+    flex-direction: column;
+    padding: 10px 20px;
+    display: flex;
+
+    /* Smooth transition */
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 99;
+  }
+
+  #nav-list.show-menu {
+    opacity: 1;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+
+/* Very Small Devices (<= 480px) */
+@media screen and (max-width: 480px) {
+  .intro-side h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .intro-side h2 {
+    font-size: 20px;
+  }
+
+  .intro-btn {
+    padding: 6px 15px;
+    font-size: 14px;
+  }
+
+  .image-side img {
+    width: 160px;
+  }
+
+  .logo h2 {
+    font-size: 20px;
+  }
+}
