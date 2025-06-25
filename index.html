@@ -4,21 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Website</title>
-    <script src="https://kit.fontawesome.com/a7bb81e7bf.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/a7bb81e7bf.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <div class="logo">
-        <h2>Asad<span>ullah</span></h2>
+        <a href="index.html"
+          ><h2>Asad<span>ullah</span></h2></a
+        >
       </div>
       <nav>
-        <ul  id="nav-list">
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Skills</a></li>
-          <li><a href="">Education</a></li>
-          <li><a href="">Contact</a></li>
+        <ul id="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="fa-solid fa-bars" id="menu-icon"></i>
       </nav>
@@ -30,14 +35,102 @@
           <h1>Hi, I'm Asad<span>ullah</span></h1>
           <h2>A Frontend Developer</h2>
           <p>Turning ideas into beautiful web experiences.</p>
-            <a href="#hire" class="hire-btn intro-btn">Hire Me</a>
-            <a href="#download" class="download-btn intro-btn">Download CV</a>
+          <a href="#contact" class="hire-btn intro-btn">Hire Me</a>
+          <a
+            href="assets/ASADULLAH Resume.pdf"
+            class="download-btn intro-btn"
+            download
+            >Download CV</a
+          >
         </div>
         <div class="image-side">
-          <img src="assets/me.png" alt="Asadullah's Image">
+          <img src="assets/me.png" alt="Asadullah's Image" />
+        </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <p>
+          Hello! I'm <strong>Asadullah</strong>, a passionate and dedicated
+          Frontend Developer based in Pakistan. I enjoy building modern,
+          responsive websites using HTML, CSS, and JavaScript. I’m currently
+          improving my coding skills through daily practice and real-world
+          projects.
+        </p>
+        <p>
+          I also explore graphic design and digital marketing, especially
+          Facebook Ads and Canva Pro tools. My mission is to help businesses
+          grow online by combining clean website designs with smart marketing
+          strategies.
+        </p>
+      </section>
+
+      <section id="skills" class="skills-section">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-box">HTML5</div>
+          <div class="skill-box">CSS3</div>
+          <div class="skill-box">JavaScript</div>
+          <div class="skill-box">GitHub</div>
+          <div class="skill-box">Canva</div>
+          <div class="skill-box">Facebook Ads</div>
+        </div>
+      </section>
+
+      <section id="education" class="education-section">
+        <h2>Education</h2>
+        <div class="education-item">
+          <h3>BS Information Technology</h3>
+          <p class="education-institute">University of Swat, Pakistan</p>
+          <p class="education-duration">2022 &hyphen; 2026 (In Progress)</p>
+          <p class="education-details">
+            Currently pursuing a Bachelor's degree focused on IT fundamentals,
+            programming, web development, databases, networks, and software
+            engineering. Expected to graduate with a strong foundation in both
+            frontend development and digital skills.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <p>
+          If you have a project, need a CV, or want to work together — feel free
+          to contact me!
+        </p>
+
+        <form action="mailto:your@email.com" method="post" enctype="text/plain">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+
+        <div class="contact-links">
+          <a href="https://wa.me/92333484916" target="_blank"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+          <a href="https://facebook.com/iiasadullah" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://youtube.com/@iiasadullah" target="_blank"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a href="https://youtube.com/iasad-ullah" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
         </div>
       </section>
     </main>
+
+    <footer>
+      <p>&copy; Asadullah's Portfolio 2025
+      </p>
+    </footer>
 
     <script src="script.js"></script>
   </body>
