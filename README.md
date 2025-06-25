@@ -35,8 +35,6 @@ A clean and responsive **personal portfolio website** showcasing my frontend dev
 
 ## 📂 Folder Structure
 
-## 📂 Folder Structure
-
 ```
 personal-portfolio/
 │
