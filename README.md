@@ -27,7 +27,7 @@ A clean and responsive **personal portfolio website** showcasing my frontend dev
 
 - HTML5  
 - CSS3  
-- JavaScript (Vanilla)  
+- JavaScript 
 - Font Awesome  
 - Google Fonts (Poppins)
 
