@@ -208,7 +208,7 @@ nav ul li a:hover::after {
 
   #nav-list {
     position: absolute;
-    top: 50px;
+    top: 70px;
     right: 0;
     width: 50%;
     height: 100vh;
